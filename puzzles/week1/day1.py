@@ -14,7 +14,7 @@ def p2(inp):
     return result
 
 
-with open('../input/week1/day1.txt') as f:
+with open('../../input/week1/day1.txt') as f:
     inp = []
     for line in f:
         inp.append(int(line))
