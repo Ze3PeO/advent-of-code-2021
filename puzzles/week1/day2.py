@@ -29,8 +29,8 @@ def p2(inp):
     return hpos * depth
 
 
-with open('../../input/week1/day2.txt') as f:
-    inp = f.readlines()
+with open('../../input/week1/day2.txt') as file:
+    inp = file.readlines()
 
     print('part 1: ' + str(p1(inp)))
     print('part 2: ' + str(p2(inp)))

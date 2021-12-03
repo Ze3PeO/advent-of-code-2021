@@ -1,22 +1,22 @@
 def p1(inp):
     result = 0
-    for i in range(1, len(inp)):
-        if inp[i] > inp[i - 1]:
+    for idx in range(1, len(inp)):
+        if inp[idx] > inp[idx - 1]:
             result += 1
     return result
 
 
 def p2(inp):
     result = 0
-    for i in range(1, len(inp) - 2):
-        if inp[i + 2] > inp[i - 1]:
+    for idx in range(1, len(inp) - 2):
+        if inp[idx + 2] > inp[idx - 1]:
             result += 1
     return result
 
 
-with open('../../input/week1/day1.txt') as f:
+with open('../../input/week1/day1.txt') as file:
     inp = []
-    for line in f:
+    for line in file:
         inp.append(int(line))
 
     print('part 1: ' + str(p1(inp)))
