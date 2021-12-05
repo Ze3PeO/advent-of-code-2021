@@ -1,6 +1,5 @@
 import re
 
-
 BOARD_WIDTH = 5
 BOARD_HEIGHT = 5
 
