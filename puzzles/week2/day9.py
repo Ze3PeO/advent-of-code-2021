@@ -52,7 +52,7 @@ def fill4(x, y, basin_size, basin_count):
         fill4(x + 1, y, basin_size, basin_count)    # rechts
 
 
-def parse_input():
+def parse_input(file):
     global field, field_height, field_width
 
     field = []
@@ -65,7 +65,7 @@ def parse_input():
 
 
 with open('../../input/week2/day9.txt') as file:
-    parse_input()
+    parse_input(file)
 
     print('part 1: ' + str(p1()))
     print('part 2: ' + str(p2()))
