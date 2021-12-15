@@ -21,13 +21,22 @@ def p1(polymer, rules):
     return count[-1] - count[0]
 
 
-def p2(polymer, rules):
+def p2(polymer):
+    return 0
+'''
+#-------------------------------------------------------------------------------
+# Eigener Lösungsansatz:
+# (Sowohl dieser Ansatz, als auch die Verwendung von dem obigen Code aus Part 1
+# mit 40 statt 10 steps, sorgen für Probleme, da der Aufwand zu hoch ist und das 
+# Programm zu lange zum Beenden braucht)
+#-------------------------------------------------------------------------------
+
+   
     global counts_dict
     counts_dict = {}
 
-    # ähnlich wie bei einem baum vorgehen
     for i in range(len(polymer) - 1):
-        down(polymer[i] + polymer[i + 1], 10)
+        down(polymer[i] + polymer[i + 1], 20)
     print(counts_dict)
 
     count = list(counts_dict.values())
@@ -39,12 +48,10 @@ def p2(polymer, rules):
 def down(pair, depth):
     depth -= 1
     if depth < 0:
-        # inc count by using the first two chars of the given pair
         for char in pair[:2]:
             if char not in counts_dict:
                 counts_dict[char] = 0
             counts_dict[char] += 1
-
         return
 
     left = pair[:1] + rules[pair]
@@ -52,8 +59,8 @@ def down(pair, depth):
 
     down(left, depth)
     down(right, depth)
-
-
+    return
+'''
 
 
 with open('../../input/week2/day14.txt') as file:
